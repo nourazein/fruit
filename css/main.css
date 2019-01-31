@@ -1,0 +1,75 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+   
+}
+
+.imgcover{
+    width: 100%;
+    object-fit: cover;
+    border-top: 2px;
+    border-bottom: 4px;
+    border-color: black;
+    border-style: solid;
+   
+}
+#gridlayout{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 3fr 2fr;
+    padding: 0px 100px 0px 100px;
+    box-sizing: border-box;
+    background-image: url(../img/fruits.png);
+    grid-gap: 40px;
+}
+
+#leftnav{
+    grid-column: 1/2;
+    grid-row: 1/2;
+    background-color: rgba(248, 247, 247, 0.9);
+    border-radius: 0px 0px 40px 40px;
+    position: sticky;
+    top: 0;
+}
+#leftnav nav{
+padding: 50px;
+}
+#leftnav nav ul{
+
+}
+#leftnav nav ul li {list-style: none;}
+#leftnav nav ul li a{
+    color: black;
+    text-decoration: none;
+}
+#content{
+    grid-column: 2/-1;
+    grid-row: 1/-1;
+    padding: 40px 0px 300px 0px;
+    display: grid;
+    width: 100%;
+    height: auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    
+    grid-auto-flow: dense;
+    grid-gap: 30px;
+}
+.span2{
+    grid-column-end: span 2;
+    grid-row-end: span 2;
+}
+.span3{
+    grid-column-end: span 3;
+    grid-row-end: span 3;
+}
+.tall4{
+  grid-row-end: span 4;
+  grid-column-end: span 2;  
+}
+.spanfullw{
+grid-column-end: span all;
+}
